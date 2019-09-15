@@ -1,5 +1,20 @@
 # Python-notes
 
+## Naming
+
+### General
+
+Choose appropriate words.
+
+Instead of get, perhaps use:
+
+- Fetch
+- Download
+- Receive
+
+Properly name temporary variables. No more tmp etc.
+
+
 ## `collections`
 
 Alternative to pythons built-in containers.
