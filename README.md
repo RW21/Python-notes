@@ -4,7 +4,10 @@
   - [Naming](#naming)
     - [General](#general)
   - [Basic data types](#basic-data-types)
+    - [Dictionary](#dictionary)
     - [Sets](#sets)
+  - [Iterators](#iterators)
+  - [Generators](#generators)
   - [`collections`](#collections)
     - [`namedtuple`](#namedtuple)
     - [`deque`](#deque)
@@ -13,9 +16,14 @@
     - [Infinite iterators](#infinite-iterators)
     - [Combinatoric iterators](#combinatoric-iterators)
     - [Others](#others)
+  - [Map / filter / reduce](#map--filter--reduce)
+    - [`filter`](#filter)
+    - [`reduce`](#reduce)
   - [Sorting](#sorting)
     - [Inserting and preserving order](#inserting-and-preserving-order)
   - [Boolean](#boolean)
+  - [Object oriented](#object-oriented)
+    - [One-line constructors](#one-line-constructors)
 
 ## Naming
 
@@ -33,6 +41,11 @@ Properly name temporary variables. No more tmp etc.
 
 ## Basic data types
 
+### Dictionary
+
+- `update`
+  - Adds elements to the dictionary if the key is not in the dictionary.
+
 ### Sets
 
 - Union
@@ -42,6 +55,38 @@ Properly name temporary variables. No more tmp etc.
 - Difference
 
 etc.
+
+## Iterators
+
+```python
+class PowTwo:
+    """Class to implement an iterator
+    of powers of two"""
+
+    def __init__(self, max = 0):
+        self.max = max
+
+    def __iter__(self):
+        self.n = 0
+        return self
+
+    def __next__(self):
+        if self.n <= self.max:
+            result = 2 ** self.n
+            self.n += 1
+            return result
+        else:
+            raise StopIteration
+```
+
+## Generators
+
+```python
+def rev_str(my_str):
+    length = len(my_str)
+    for i in range(length - 1,-1,-1):
+        yield my_str[i]
+```
 
 ## `collections`
 
@@ -92,7 +137,31 @@ Repeat iterators.
 - `chain`
 - `compress`
 
+## Map / filter / reduce
 
+Functional approaches. Use comprehensions instead.
+
+### `filter`
+
+```python
+number_list = range(-5, 5)
+less_than_zero = list(filter(lambda x: x < 0, number_list))
+```
+
+### `reduce`
+
+Instead of
+
+```python
+product = 1
+list = [1, 2, 3, 4]
+for num in list:
+    product = product * num
+```
+
+```python
+product = reduce((lambda x, y: x * y), [1, 2, 3, 4])
+```
 
 ## Sorting
 
@@ -106,3 +175,13 @@ Repeat iterators.
   - Return true when at least one of the elements is true.
 - `all`
   - Return true when all the elements are true.
+
+## Object oriented
+
+### One-line constructors
+
+```python
+class A(object):
+    def __init__(self, a, b, c, d, e, f):
+        self.__dict__.update({k: v for k, v in locals().items() if k != 'self'})
+```
