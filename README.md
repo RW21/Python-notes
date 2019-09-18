@@ -24,6 +24,7 @@
   - [Boolean](#boolean)
   - [Object oriented](#object-oriented)
     - [One-line constructors](#one-line-constructors)
+  - [F-strings](#f-strings)
 
 ## Naming
 
@@ -150,7 +151,7 @@ less_than_zero = list(filter(lambda x: x < 0, number_list))
 
 ### `reduce`
 
-Instead of
+Only thing not reproducible using comprehensions. 
 
 ```python
 product = 1
@@ -184,4 +185,13 @@ product = reduce((lambda x, y: x * y), [1, 2, 3, 4])
 class A(object):
     def __init__(self, a, b, c, d, e, f):
         self.__dict__.update({k: v for k, v in locals().items() if k != 'self'})
+```
+
+## F-strings
+
+```python
+a = 1
+name = Joel
+
+print(f'There is only {a} {name}.')
 ```
