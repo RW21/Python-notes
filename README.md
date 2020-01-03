@@ -8,23 +8,27 @@
     - [Sets](#sets)
   - [Iterators](#iterators)
   - [Generators](#generators)
-  - [`collections`](#collections)
-    - [`namedtuple`](#namedtuple)
-    - [`deque`](#deque)
-    - [`Counter`](#counter)
-  - [`itertools`](#itertools)
+  - [collections](#collections)
+    - [namedtuple](#namedtuple)
+    - [deque](#deque)
+    - [Counter](#counter)
+    - [defaultdict](#defaultdict)
+  - [itertools](#itertools)
     - [Infinite iterators](#infinite-iterators)
     - [Combinatoric iterators](#combinatoric-iterators)
     - [Others](#others)
   - [Map / filter / reduce](#map--filter--reduce)
-    - [`filter`](#filter)
-    - [`reduce`](#reduce)
+    - [filter](#filter)
+    - [reduce](#reduce)
   - [Sorting](#sorting)
     - [Inserting and preserving order](#inserting-and-preserving-order)
   - [Boolean](#boolean)
   - [Object oriented](#object-oriented)
     - [One-line constructors](#one-line-constructors)
   - [F-strings](#f-strings)
+- [Numpy](#numpy)
+  - [Arrays](#arrays)
+    - [](#)
 
 ## Naming
 
@@ -111,6 +115,10 @@ Counter(['a','a','b','b','c'])
 # Counter({'a': 2, 'b': 2, 'c': 1})
 ```
 
+### `defaultdict`
+
+`dict` subclass. Sets default type etc. for default dictionary argument. Prevents having to check for inclusion every time.
+
 ## `itertools`
 
 Tools for iterables. 
@@ -195,3 +203,11 @@ name = Joel
 
 print(f'There is only {a} {name}.')
 ```
+
+# Numpy
+
+## Arrays
+
+Basics:
+
+### 
