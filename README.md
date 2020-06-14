@@ -8,27 +8,25 @@
     - [Sets](#sets)
   - [Iterators](#iterators)
   - [Generators](#generators)
-  - [collections](#collections)
-    - [namedtuple](#namedtuple)
-    - [deque](#deque)
-    - [Counter](#counter)
-    - [defaultdict](#defaultdict)
-  - [itertools](#itertools)
+  - [`collections`](#collections)
+    - [`namedtuple`](#namedtuple)
+    - [`deque`](#deque)
+    - [`Counter`](#counter)
+    - [`defaultdict`](#defaultdict)
+  - [`itertools`](#itertools)
     - [Infinite iterators](#infinite-iterators)
     - [Combinatoric iterators](#combinatoric-iterators)
     - [Others](#others)
   - [Map / filter / reduce](#map--filter--reduce)
-    - [filter](#filter)
-    - [reduce](#reduce)
+    - [`filter`](#filter)
+    - [`reduce`](#reduce)
   - [Sorting](#sorting)
     - [Inserting and preserving order](#inserting-and-preserving-order)
   - [Boolean](#boolean)
   - [Object oriented](#object-oriented)
     - [One-line constructors](#one-line-constructors)
   - [F-strings](#f-strings)
-- [Numpy](#numpy)
-  - [Arrays](#arrays)
-    - [](#)
+  - [File handling](#file-handling)
 
 ## Naming
 
@@ -204,10 +202,19 @@ name = Joel
 print(f'There is only {a} {name}.')
 ```
 
-# Numpy
+## File handling
 
-## Arrays
+```python
+file = open("filename", mode)
+```
 
-Basics:
+Mainly use the following modes:
 
-### 
+- `r`
+  - read only
+- `w`
+  - write only
+- Add `+`
+  - update
+   
+Just loop through file to get line by line.
