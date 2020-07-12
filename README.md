@@ -1,33 +1,36 @@
 # Python-notes
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
 
 - [Python-notes](#python-notes)
-  - [Naming](#naming)
-    - [General](#general)
-  - [Basic data types](#basic-data-types)
-    - [Dictionary](#dictionary)
-    - [Sets](#sets)
-  - [Iterators](#iterators)
-  - [Generators](#generators)
-  - [`collections`](#collections)
-    - [`namedtuple`](#namedtuple)
-    - [`deque`](#deque)
-    - [`Counter`](#counter)
-    - [`defaultdict`](#defaultdict)
-  - [`itertools`](#itertools)
-    - [Infinite iterators](#infinite-iterators)
-    - [Combinatoric iterators](#combinatoric-iterators)
-    - [Others](#others)
-  - [Map / filter / reduce](#map--filter--reduce)
-    - [`filter`](#filter)
-    - [`reduce`](#reduce)
-  - [Sorting](#sorting)
-    - [Inserting and preserving order](#inserting-and-preserving-order)
-  - [Boolean](#boolean)
-  - [Object oriented](#object-oriented)
-    - [One-line constructors](#one-line-constructors)
-  - [F-strings](#f-strings)
-  - [File handling](#file-handling)
+    - [Naming](#naming)
+        - [General](#general)
+    - [Basic data types](#basic-data-types)
+        - [Dictionary](#dictionary)
+        - [Sets](#sets)
+    - [Iterators](#iterators)
+    - [Generators](#generators)
+    - [`collections`](#collections)
+        - [`namedtuple`](#namedtuple)
+        - [`deque`](#deque)
+        - [`Counter`](#counter)
+        - [`defaultdict`](#defaultdict)
+    - [`itertools`](#itertools)
+        - [Infinite iterators](#infinite-iterators)
+        - [Combinatoric iterators](#combinatoric-iterators)
+        - [Others](#others)
+    - [Map / filter / reduce](#map--filter--reduce)
+        - [`filter`](#filter)
+        - [`reduce`](#reduce)
+    - [Sorting](#sorting)
+        - [Inserting and preserving order](#inserting-and-preserving-order)
+    - [Boolean](#boolean)
+    - [Object oriented](#object-oriented)
+        - [One-line constructors](#one-line-constructors)
+    - [F-strings](#f-strings)
+    - [File handling](#file-handling)
 
+<!-- markdown-toc end -->
 ## Naming
 
 ### General
@@ -192,6 +195,12 @@ class A(object):
     def __init__(self, a, b, c, d, e, f):
         self.__dict__.update({k: v for k, v in locals().items() if k != 'self'})
 ```
+
+### Dunder
+
+- Difference between `__init__` and `__call__`.
+  - init when initialise, call when called.
+
 
 ## F-strings
 
